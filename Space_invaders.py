@@ -4,7 +4,7 @@ BLANCO = (255, 255, 255)
 NEGRO = (0, 0, 0)
  
 pygame.init()
-pantalla = pygame.display.set_mode([800, 600])
+pantalla = pygame.display.set_mode([960, 600])
 pygame.display.set_caption('Space Invaders')
  
 reloj = pygame.time.Clock()
@@ -34,7 +34,7 @@ while not hecho:
             # El usuario pulsa una tecla
         if evento.type == pygame.KEYDOWN:
             # Resuelve que ha sido una tecla de flecha, por lo que
-            # ajusta la velocidad.
+            # ajusta la velocidad
             if evento.key == pygame.K_LEFT:
                 x_speed = -10
             if evento.key == pygame.K_RIGHT:
@@ -52,8 +52,7 @@ while not hecho:
             
      
     # Mueve el objeto de acuerdo a la velocidad del vector.
-    x_coord += x_speed
-    y_coord += y_speed 
+    x_coord += x_speed 
              
     # Copia la imagen en pantalla:
     pantalla.blit(imagen_de_fondo, posicion_base)
